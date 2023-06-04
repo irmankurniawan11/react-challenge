@@ -7,7 +7,7 @@ const NavBar = () => {
     const navigation = [
         { name: 'About Me', href: '/about' },
         { name: 'Projects', href: '/projects' },
-        { name: 'Blog', href: '/blog' },
+        { name: 'Challenges', href: '/challenges' },
     ]
 
     const [isDark, setDark] = useState(false);
