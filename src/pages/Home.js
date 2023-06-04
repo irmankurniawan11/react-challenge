@@ -1,0 +1,78 @@
+import NavBar from "../components/NavBar";
+import { ArrowTopRightOnSquareIcon, ArrowRightIcon, ArrowSmallRightIcon } from '@heroicons/react/24/solid'
+
+const Home = () => {
+    return (
+        <div>
+            <NavBar/>
+            <Header/>
+            <Challenges/>
+        </div>
+    )
+}
+
+const Header = () => {
+    return (
+        <header className="container max-w-6xl mx-auto px-8 sm:px-0 mb-8 dark:text-white/90">
+            <h1 className="font-bold text-3xl sm:text-4xl my-4">Slicing UI Challenge by Irman</h1>
+            <p>Hasil slicing UI dari challenge desain dari <a className="text-amber-500" href="https://codedesign.dev/" target="_blank" rel="noreferrer" alt="codedesign">codedesign</a>.</p>
+        </header>
+    )
+}
+
+const ChallengeCard = ( {imageUrl, title, desc, url, sourceUrl} ) => {
+    return (
+        <div className="rounded-xl overflow-hidden shadow-md sm:w-64">
+            <img src={imageUrl} className="w-full h-40 object-cover"/>
+            <div className="p-4 bg-white dark:bg-slate-700">
+                <h1 className="font-bold text-lg mb-1">{title}</h1>
+                <p className="truncate text-sm">{desc}</p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                    <a href={sourceUrl} className="font-bold flex items-center px-4 py-2 rounded-full text-sm ring-1 ring-slate-200 hover:bg-slate-100 dark:hover:bg-white/20 dark:ring-white/30">Source Code<ArrowTopRightOnSquareIcon className="w-4 h-4 ml-1"/></a>
+                    <a href={url} className="font-bold flex items-center px-4 py-2 rounded-full text-sm ring-1 ring-blue-400 bg-blue-600 hover:bg-blue-500 text-white">Visit<ArrowSmallRightIcon className="w-4 h-4 ml-1"/></a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const Challenges = () => {
+    const challengeData = [
+        {
+            title: "Twitter Embed",
+            desc: "Voluptate Lorem aliqua fugiat fugiat commodo.",
+            imageUrl: "/image/preview-twitter-embed.png",
+            sourceUrl: "/challenge/twitter-embed",
+            url: "/challenge/twitter-embed"
+        },
+        {
+            title: "Holadok",
+            desc: "Voluptate Lorem aliqua fugiat fugiat commodo.",
+            imageUrl: "/image/preview-holadok.png",
+            sourceUrl: "/challenge/holadok",
+            url: "/challenge/holadok"
+        }
+    ]
+    return (
+        <section className="mb-10 dark:text-white/90">
+            <div className="container max-w-6xl mx-auto px-8 sm:px-0">
+                <div className="flex items-center justify-between">
+                    <h1 className="font-bold text-3xl sm:text-4xl mt-4 mb-6">Challenges</h1>
+                    <a href="/challenges" className="font-bold flex items-center">View All<ArrowSmallRightIcon className="w-4 h-4 ml-1"/></a>
+                </div>
+                <div className="flex gap-6 flex-wrap">
+                    {
+                        challengeData.map((item)=>{
+                            return (
+                                <ChallengeCard key={item.title} imageUrl={item.imageUrl} title={item.title} desc={item.desc} url={item.url} sourceUrl={item.sourceUrl}/>
+                            )
+                        })
+                    }
+                    
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default Home;
