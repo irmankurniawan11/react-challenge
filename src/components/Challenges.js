@@ -1,11 +1,27 @@
 import { ArrowSmallRightIcon, ArrowTopRightOnSquareIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
+import techStackIcons from "../data/techStackIcons"
+import ReactIcon from "../icon/ReactIcon"
+import TailwindIcon from "../icon/TailwindIcon"
+import React from "react"
 
-const ChallengeCard = ( {imageUrl, title, desc, url, sourceUrl} ) => {
+const ChallengeCard = ( {imageUrl, title, desc, url, sourceUrl, stacks} ) => {
+    const techStackIcons = {
+        react: <ReactIcon/>,
+        tailwind: <TailwindIcon/>
+    }
+    
     return (
         <div className="rounded-xl overflow-hidden shadow-md sm:w-72">
             <img src={imageUrl} className="w-full h-40 object-cover"/>
             <div className="p-4 bg-white dark:bg-slate-700">
                 <h1 className="font-bold text-lg mb-1">{title}</h1>
+                <div className="flex items-center gap-2 my-2">
+                    {stacks.map((stack)=>(
+                        <span key={stack}>
+                            {React.cloneElement(techStackIcons[stack], {className: "w-4 h-4"} )}
+                        </span>
+                    ))}
+                </div>
                 <p className="text-sm line-clamp-2">{desc}</p>
                 <div className="flex justify-stretch gap-2 mt-3">
                     <a href={sourceUrl} rel="noreferrer" target="_blank" className="font-bold flex items-center px-4 py-2 rounded-full text-sm ring-1 ring-slate-200 hover:bg-slate-100 dark:hover:bg-white/20 dark:ring-white/30">Source Code<ArrowTopRightOnSquareIcon className="w-4 h-4 ml-1"/></a>
@@ -31,7 +47,7 @@ const Challenges = ( {title, data, href, children} ) => {
                     {
                         data.map((item)=>{
                             return (
-                                <ChallengeCard key={item.title} imageUrl={item.imageUrl} title={item.title} desc={item.desc} url={item.url} sourceUrl={item.sourceUrl}/>
+                                <ChallengeCard key={item.title} imageUrl={item.imageUrl} title={item.title} desc={item.desc} url={item.url} sourceUrl={item.sourceUrl} stacks={item.stacks}/>
                             )
                         })
                     }
