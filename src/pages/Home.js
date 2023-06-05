@@ -34,8 +34,12 @@ const Home = () => {
         <div>
             <NavBar/>
             <Header/>
-            <Challenges title="Challenges" href="/challenges" data={challengeData}/>
-            <Challenges title="Projects" href="/projects" data={projectData}/>
+            <Challenges title="Challenges" href="/challenges" data={challengeData}>
+                <p>Slicing UI result (Design to Code Challenge) from <a className="text-amber-500" href="https://codedesign.dev/" target="_blank" rel="noreferrer" alt="codedesign">codedesign</a>.</p>
+            </Challenges>
+            <Challenges title="Projects" href="/projects" data={projectData}>
+                <p>A collection of front-end projects developed using React, Next, Tailwind, and other frameworks.</p>
+            </Challenges>
             <Footer/>
         </div>
     )

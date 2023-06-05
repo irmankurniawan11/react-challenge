@@ -16,15 +16,18 @@ const ChallengeCard = ( {imageUrl, title, desc, url, sourceUrl} ) => {
     )
 }
 
-const Challenges = ( {title, data, href} ) => {
+const Challenges = ( {title, data, href, children} ) => {
     return (
-        <section className="mb-10 dark:text-white/90">
+        <section id={title} className="mb-10 dark:text-white/90">
             <div className="container max-w-6xl mx-auto px-8 sm:px-0">
-                <div className="flex items-center justify-between">
-                    <h1 className="font-bold text-3xl sm:text-4xl mt-4 mb-6">{title}</h1>
-                    <a href={href} className="font-bold flex items-center">View All<ChevronRightIcon className="w-4 h-4 ml-1"/></a>
+                <div className="flex items-baseline justify-between gap-4">
+                    <div className="mt-4 mb-6">
+                    <h1 className="font-bold text-3xl sm:text-4xl mb-2">{title}</h1>
+                    {children}
+                    </div>
+                    <a href={href} className="font-bold flex items-center shrink-0">View All<ChevronRightIcon className="w-4 h-4 ml-1"/></a>
                 </div>
-                <div className="flex gap-6 flex-wrap flex-col sm:flex-row">
+                <div className="flex gap-8 flex-wrap flex-col sm:flex-row">
                     {
                         data.map((item)=>{
                             return (

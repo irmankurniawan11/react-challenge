@@ -6,8 +6,8 @@ import { useEffect, useState } from "react"
 const NavBar = () => {
     const navigation = [
         { name: 'About Me', href: '/about' },
-        { name: 'Projects', href: '/projects' },
-        { name: 'Challenges', href: '/challenges' },
+        { name: 'Projects', href: '#Projects' },
+        { name: 'Challenges', href: '#Challenges' },
     ]
 
     const [isDark, setDark] = useState(false);
