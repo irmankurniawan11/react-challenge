@@ -5,7 +5,7 @@ const projectData = [
         imageUrl: "/image/preview-gendhis.png",
         sourceUrl: "#",
         url: "https://projectirman.nasihosting.com/gendhis-ayu/",
-        stacks: ["php"]
+        stacks: ["php","bootstrap"]
     },
     {
         title: "Extra Time - Landing Page",
