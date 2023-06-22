@@ -1,12 +1,14 @@
+import React from "react"
 import { ArrowSmallRightIcon, ArrowTopRightOnSquareIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
 import ReactIcon from "../icon/ReactIcon"
 import TailwindIcon from "../icon/TailwindIcon"
-import React from "react"
+import PHPIcon from "../icon/PHPIcon"
 
 const ChallengeCard = ( {imageUrl, title, desc, url, sourceUrl, stacks} ) => {
     const techStackIcons = {
         react: <ReactIcon/>,
-        tailwind: <TailwindIcon/>
+        tailwind: <TailwindIcon/>,
+        php: <PHPIcon/>,
     }
     
     return (
@@ -23,7 +25,9 @@ const ChallengeCard = ( {imageUrl, title, desc, url, sourceUrl, stacks} ) => {
                 </div>
                 <p className="text-sm line-clamp-2">{desc}</p>
                 <div className="flex justify-stretch gap-2 mt-3">
-                    <a href={sourceUrl} rel="noreferrer" target="_blank" className="font-bold flex items-center px-4 py-2 rounded-full text-sm ring-1 ring-slate-200 hover:bg-slate-100 dark:hover:bg-white/20 dark:ring-white/30">Source Code<ArrowTopRightOnSquareIcon className="w-4 h-4 ml-1"/></a>
+                    {sourceUrl!="#"&&(
+                        <a href={sourceUrl} rel="noreferrer" target="_blank" className="font-bold flex items-center px-4 py-2 rounded-full text-sm ring-1 ring-slate-200 hover:bg-slate-100 dark:hover:bg-white/20 dark:ring-white/30">Source Code<ArrowTopRightOnSquareIcon className="w-4 h-4 ml-1"/></a>
+                    )} 
                     <a href={url} className="font-bold flex items-center px-4 py-2 rounded-full text-sm ring-1 ring-blue-400 bg-blue-600 hover:bg-blue-500 text-white">Visit<ArrowSmallRightIcon className="w-4 h-4 ml-1"/></a>
                 </div>
             </div>
