@@ -1,16 +1,8 @@
 import React from "react"
 import { ArrowSmallRightIcon, ArrowTopRightOnSquareIcon, ChevronRightIcon } from "@heroicons/react/24/solid"
-import ReactIcon from "../icon/ReactIcon"
-import TailwindIcon from "../icon/TailwindIcon"
-import PHPIcon from "../icon/PHPIcon"
+import techStackIcons from "../data/iconData"
 
 const ChallengeCard = ( {imageUrl, title, desc, url, sourceUrl, stacks} ) => {
-    const techStackIcons = {
-        react: <ReactIcon/>,
-        tailwind: <TailwindIcon/>,
-        php: <PHPIcon/>,
-    }
-    
     return (
         <div className="rounded-xl overflow-hidden shadow-md sm:w-72">
             <img src={imageUrl} className="w-full h-40 object-cover"/>
