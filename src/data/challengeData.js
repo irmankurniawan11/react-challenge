@@ -14,6 +14,14 @@ const challengeData = [
         sourceUrl: "https://github.com/irmankurniawan11/react-challenge/blob/main/src/pages/Holadok.js",
         url: "/challenge/holadok",
         stacks: ["react","tailwind"]
+    },
+    {
+        title: "Sobat Bangun - Landing Page",
+        desc: "",
+        imageUrl: "/image/preview-sobatbangun.png",
+        sourceUrl: "https://github.com/irmankurniawan11/fe-slicer-test",
+        url: "https://irman-slicer-test.vercel.app/",
+        stacks: ["react","tailwind"]
     }
 ]
 
