@@ -16,12 +16,12 @@ const challengeData = [
         stacks: ["react","tailwind"]
     },
     {
-        title: "Sobat Bangun - Landing Page",
-        desc: "",
+        title: "Sobat Bangun",
+        desc: "Digital platform page with carousel image, item details, testimony, and footer components",
         imageUrl: "/image/preview-sobatbangun.png",
         sourceUrl: "https://github.com/irmankurniawan11/fe-slicer-test",
         url: "https://irman-slicer-test.vercel.app/",
-        stacks: ["react","tailwind"]
+        stacks: ["next","tailwind"]
     }
 ]
 

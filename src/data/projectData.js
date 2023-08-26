@@ -8,6 +8,22 @@ const projectData = [
         stacks: ["php","bootstrap"]
     },
     {
+        title: "Gorest API Implementation",
+        desc: 'Implementation of Gorest API (gorest.co.in)',
+        imageUrl: "/image/preview-gorestcrud.png",
+        sourceUrl: "#",
+        url: "https://fe-challenge-synapsis-irman.vercel.app/",
+        stacks: ["next","tailwind"]
+    },
+    {
+        title: "BizzERP - ERP Landing Page",
+        desc: 'Landing page with pricing and contact section',
+        imageUrl: "/image/preview-bizzerp.png",
+        sourceUrl: "#",
+        url: "https://keda-fe-test.vercel.app/",
+        stacks: ["next","tailwind"]
+    },
+    {
         title: "Extra Time - Landing Page",
         desc: 'Extra Time is dummy landing page website for social media page "Extra Time Indonesia".',
         imageUrl: "/image/preview-extratime.png",

@@ -10,8 +10,8 @@ const ChallengeCard = ( {imageUrl, title, desc, url, sourceUrl, stacks} ) => {
                 <h1 className="font-bold text-lg mb-1">{title}</h1>
                 <div className="flex items-center gap-2 my-2">
                     {stacks.map((stack)=>(
-                        <span key={stack} title={stack}>
-                            {React.cloneElement(techStackIcons[stack], {className: "w-4 h-4"} )}
+                        <span key={stack} title={techStackIcons[stack].alias}>
+                            {React.cloneElement(techStackIcons[stack].component, {className: "w-4 h-4"} )}
                         </span>
                     ))}
                 </div>
