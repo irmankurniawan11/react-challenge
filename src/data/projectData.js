@@ -1,5 +1,13 @@
 const projectData = [
     {
+        title: "Mushola Baiturrohim",
+        desc: "Official website for Mushola Baiturrohim Buaran Kota Pekalongan.",
+        imageUrl: "/image/preview-baiturrohim.png",
+        sourceUrl: "#",
+        url: "https://baiturrohim.my.id",
+        stacks: ["next","tailwind"]
+    },
+	{
         title: "Gendhis Ayu - Landing Page",
         desc: "Gendhis Ayu is a landing page website by Gendhis Ayu, specializing in the sale of organic palm sugar. The website provides a platform to showcase and promote their range of high-quality palm sugar products.",
         imageUrl: "/image/preview-gendhis.png",
